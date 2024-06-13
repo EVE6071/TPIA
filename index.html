@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Interface d'Interaction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 600px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        form {
+            margin-bottom: 30px;
+        }
+        .text-center{
+            color:blue;
+            font-size:30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center">Interface d'Interaction</h1>
+
+    <div class="card">
+        <div class="card-header">
+            Uploader des Données
+        </div>
+        <div class="card-body">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="file" name="file" class="form-control-file" />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Upload</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-header">
+            Démarrer l'Entraînement
+        </div>
+        <div class="card-body">
+            <form action="/train" method="post">
+                <button type="submit" class="btn btn-success btn-block">Démarrer l'Entraînement</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-header">
+            Visualisation des Résultats
+        </div>
+        <div class="card-body">
+            <form action="/infer" method="post">
+                <button type="submit" class="btn btn-info btn-block">Faire l'Inférence</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
